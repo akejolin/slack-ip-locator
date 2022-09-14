@@ -3,6 +3,7 @@ export type ActionTypes = 'IP_FOUND' | 'IP_NOT_FOUND' | 'VALID_IP' | 'INVALID_IP
 export type Action = {
   message: string,
   reason: ActionTypes,
+  ip: string,
 }
 
 export type Emails = string[] | null
