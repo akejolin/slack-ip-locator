@@ -63,7 +63,7 @@ export default (app:any, token:string):void => {
           } else {
             resultRecords.push({
               ip: ipMatched[0],
-              message: `Valid IP address but not within target. Action: No action needed. ${printIpData(result.data as ServerData, emailString as string)}`,
+              message: `Valid IP address but not within target. Action: No action needed. ${result.data.region ? printIpData(result.data as ServerData, emailString as string): ''}`,
               reason: 'INVALID_IP',
             })
           }
